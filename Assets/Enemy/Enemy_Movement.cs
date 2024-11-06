@@ -4,6 +4,7 @@ public class Enemy_Movement : MonoBehaviour
 {
     public GameObject player;
     public float speed;
+    public GameObject spotlight; // Reference to the spotlight
 
     private float distance;
 
@@ -25,5 +26,14 @@ public class Enemy_Movement : MonoBehaviour
         transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
         transform.rotation = Quaternion.Euler(Vector3.forward * angle);
     }
-}
 
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        // Check if the enemy enters the spotlight's range
+        if (other.gameObject == spotlight)
+        {
+            // Destroy the enemy
+            Destroy(gameObject);
+        }
+    }
+}
