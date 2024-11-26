@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class FlashlightSwitchUsingLMB : MonoBehaviour
+public class TurnFlashlightOnAndOff : MonoBehaviour
 {
     public GameObject flashlight; // Reference to the flashlight GameObject
 
