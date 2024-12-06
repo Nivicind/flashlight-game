@@ -6,7 +6,7 @@ public class EnemySpawnSystem : MonoBehaviour
 {
     public GameObject enemyPrefab; // Assign the enemy prefab in the inspector
     public Transform player; // Assign the player's transform in the inspector
-    public float playerAvoidanceRadius = 5f; // Minimum radius from the player for spawning
+    public float dontSpawnNearPlayerRadius = 5f; // Minimum radius from the player for spawning
     public int maxEnemies = 10; // Maximum number of enemies allowed to spawn
     public BoxCollider2D spawnArea; // The BoxCollider2D that defines the spawn area
     public LayerMask obstacleLayer; // Layer for obstacles to detect collisions
@@ -84,7 +84,7 @@ public class EnemySpawnSystem : MonoBehaviour
 
         // Check if position is within the player's avoidance radius
         float distanceToPlayer = Vector2.Distance(position, player.position);
-        if (distanceToPlayer < playerAvoidanceRadius)
+        if (distanceToPlayer < dontSpawnNearPlayerRadius)
         {
             return false; // Position is too close to the player
         }
@@ -118,8 +118,8 @@ public class EnemySpawnSystem : MonoBehaviour
         // Draw the player avoidance radius in the Scene view
         if (player != null)
         {
-            Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere(player.position, playerAvoidanceRadius);
+            Gizmos.color = Color.grey;
+            Gizmos.DrawWireSphere(player.position, dontSpawnNearPlayerRadius);
         }
 
         // Draw the spawn area bounds in the Scene view

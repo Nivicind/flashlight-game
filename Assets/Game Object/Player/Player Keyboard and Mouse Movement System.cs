@@ -1,16 +1,18 @@
 using UnityEngine;
 
-public class KeyboardAndMouseMovementSystem : MonoBehaviour
+public class PlayerKeyboardAndMouseMovementSystem : MonoBehaviour
 {
     Vector2 moveInput;
     private Animator animator;
 
+    private Rigidbody2D rb;
     public float moveSpeed = 0.0f;
     public float rotationSpeed = 0.0f;
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     private void Start()
@@ -29,9 +31,8 @@ public class KeyboardAndMouseMovementSystem : MonoBehaviour
         moveInput.x = Input.GetAxis("Horizontal");
         moveInput.y = Input.GetAxis("Vertical");
 
-        Vector3 movement = new Vector3(moveInput.x, moveInput.y, 0) * moveSpeed * Time.deltaTime;
-        transform.Translate(movement, Space.World);
-
+        rb.MovePosition(rb.position + moveInput * moveSpeed * Time.fixedDeltaTime);
+        
         if (moveInput != Vector2.zero)
         {
             animator.SetBool("isWalking", true); // Turn on walk animation

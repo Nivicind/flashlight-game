@@ -12,12 +12,13 @@ GameObject:
   - component: {fileID: 3155328043083057388}
   - component: {fileID: 1870000220600205289}
   - component: {fileID: 600612742423276501}
-  - component: {fileID: 6785832983162199727}
   - component: {fileID: 4343383966686968226}
   - component: {fileID: 3994607616501164741}
   - component: {fileID: 4644555937500684227}
   - component: {fileID: 2314336677068337974}
+  - component: {fileID: 6785832983162199727}
   - component: {fileID: 4754213786271896836}
+  - component: {fileID: -7898558924795593109}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -158,59 +159,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &6785832983162199727
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1048227992691819293}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ShadowGroup: 0
-  m_Priority: 0
-  m_ComponentVersion: 5
-  m_HasRenderer: 1
-  m_UseRendererSilhouette: 1
-  m_CastsShadows: 1
-  m_SelfShadows: 0
-  m_AlphaCutoff: 0.1
-  m_ApplyToSortingLayers: 00000000
-  m_ShapePath:
-  - {x: -0.6300001, y: -0.63999987, z: 0}
-  - {x: -0.6300001, y: 0.63999987, z: 0}
-  - {x: 0.6300001, y: 0.63999987, z: 0}
-  - {x: 0.6300001, y: -0.63999987, z: 0}
-  m_ShapePathHash: 0
-  m_InstanceId: 0
-  m_ShadowShape2DComponent: {fileID: 1870000220600205289}
-  m_ShadowShape2DProvider:
-    rid: 8943267642827341897
-  m_ShadowCastingSource: 2
-  m_ShadowMesh:
-    m_Mesh: {fileID: 0}
-    m_LocalBounds:
-      m_Center: {x: 0, y: 0, z: 0}
-      m_Extent: {x: 0.57881165, y: 0.57881165, z: 0}
-    m_EdgeProcessing: 1
-    m_TrimEdge: 0.06
-    m_FlipX: 0
-    m_FlipY: 0
-    m_InitialTrim: 0
-  m_CastingOption: 1
-  m_PreviousTrimEdge: 0.06
-  m_PreviousEdgeProcessing: 1
-  m_PreviousShadowCastingSource: 2
-  m_PreviousShadowShape2DSource: {fileID: 1870000220600205289}
-  references:
-    version: 2
-    RefIds:
-    - rid: 8943267642827341897
-      type: {class: ShadowShape2DProvider_Collider2D, ns: UnityEngine.Rendering.Universal, asm: Unity.RenderPipelines.Universal.2D.Runtime}
-      data: 
 --- !u!95 &4343383966686968226
 Animator:
   serializedVersion: 7
@@ -317,6 +265,59 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   target: {fileID: 9103883889880833151, guid: 5c5e343b8c416bc40bcde415fc821f70, type: 3}
+--- !u!114 &6785832983162199727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1048227992691819293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_Priority: 0
+  m_ComponentVersion: 5
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_AlphaCutoff: 0.1
+  m_ApplyToSortingLayers: 00000000
+  m_ShapePath:
+  - {x: -0.6300001, y: -0.63999987, z: 0}
+  - {x: -0.6300001, y: 0.63999987, z: 0}
+  - {x: 0.6300001, y: 0.63999987, z: 0}
+  - {x: 0.6300001, y: -0.63999987, z: 0}
+  m_ShapePathHash: 0
+  m_InstanceId: 0
+  m_ShadowShape2DComponent: {fileID: 1870000220600205289}
+  m_ShadowShape2DProvider:
+    rid: 8943267642827341897
+  m_ShadowCastingSource: 2
+  m_ShadowMesh:
+    m_Mesh: {fileID: 0}
+    m_LocalBounds:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0.57881165, y: 0.57881165, z: 0}
+    m_EdgeProcessing: 1
+    m_TrimEdge: 0.06
+    m_FlipX: 0
+    m_FlipY: 0
+    m_InitialTrim: 0
+  m_CastingOption: 1
+  m_PreviousTrimEdge: 0.06
+  m_PreviousEdgeProcessing: 1
+  m_PreviousShadowCastingSource: 2
+  m_PreviousShadowShape2DSource: {fileID: 1870000220600205289}
+  references:
+    version: 2
+    RefIds:
+    - rid: 8943267642827341897
+      type: {class: ShadowShape2DProvider_Collider2D, ns: UnityEngine.Rendering.Universal, asm: Unity.RenderPipelines.Universal.2D.Runtime}
+      data: 
 --- !u!114 &4754213786271896836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -329,5 +330,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86700a613e74fa54fa2b9fd73b8cd09b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 9103883889880833151, guid: 5c5e343b8c416bc40bcde415fc821f70, type: 3}
-  detectionRadius: 10
+  detectionRadius: 3
+--- !u!114 &-7898558924795593109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1048227992691819293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eab9a7cd1547324cb8723f154003c58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 1
+  roamDelay: 2
+  roamDistance: 2
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 64
